@@ -18,6 +18,9 @@ jobs:
         run: |
           echo "Hello, World!"
           echo "This is my first GitHub Actions workflow."
+          pwd
+          chmod +x ./scripts/hello.sh
+          ./scripts/hello.sh 
 
       - name: Set up Python
         uses: actions/setup-python@v2
