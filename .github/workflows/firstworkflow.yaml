@@ -21,6 +21,8 @@ jobs:
           pwd
           chmod +x ./scripts/hello.sh
           ./scripts/hello.sh 
+          echo "My first Secret data: ${{ secrets.MY_SECRET }}"
+          echo "My first Environment variable: ${{ vars.MY_VARIABLE }}"
 
   #     - name: Set up Python
   #       uses: actions/setup-python@v2
