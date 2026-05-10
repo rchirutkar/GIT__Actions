@@ -26,7 +26,8 @@ jobs:
   
   second-run:
     runs-on: ubuntu-latest
-    needs: first-run
+    needs: first-run # it allows to run this job after the successful completion of the first-run job
+    if: failure() # it allows to run this job only if the first-run job fails 
     steps:
       - name: Checkout Repo code
         uses: actions/checkout@v6
