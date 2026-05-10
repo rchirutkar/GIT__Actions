@@ -15,13 +15,14 @@ on:
 jobs:
 
     multi-env-run:
+      name: Multi Environment Job {{ inputs.environment }}
         runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}
 
         steps:
 
             - name: Checkout Repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v4 # it allows to checkout the repository code in the workflow
 
             - name: Deploy to Environment
               run: |
