@@ -15,7 +15,7 @@ on:
 jobs:
 
     multi-env-run:
-      name: Multi Environment Job {{ inputs.environment }}
+        name: Multi Environment Job {{ inputs.environment }}
         runs-on: ubuntu-latest
         environment: ${{ inputs.environment }}
 
