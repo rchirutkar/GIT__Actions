@@ -23,6 +23,19 @@ jobs:
           ./scripts/hello.sh 
           echo "My first Secret data: ${{ secrets.MY_SECRET }}"
           echo "My first Environment variable: ${{ vars.MY_VARIABLE }}"
+  
+  second-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo code
+        uses: actions/checkout@v6
+
+      - name: Say Hello Again
+        run: |
+          echo "Hello again, World!"
+          echo "This is my second job in the workflow."
+          pwd
+          # Mul"My first Environment variable: ${{ vars.MY_VARIABLE }}"
 
   #     - name: Set up Python
   #       uses: actions/setup-python@v2
